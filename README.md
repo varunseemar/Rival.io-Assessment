@@ -4,6 +4,17 @@ A full-stack task management application: a TypeScript REST API backed by Postgr
 
 > Built for the Full-Stack Developer Assessment. Implements all of Tasks 1–5 plus several bonus features.
 
+## 🔗 Live Demo
+
+| | URL |
+| --- | --- |
+| **Frontend** (Vercel) | https://rival-io-assessment-vijj.vercel.app |
+| **Backend API** (Render) | https://rival-io-assessment.onrender.com |
+
+**Demo login:** `admin@example.com` / `password123` (admin) · `user@example.com` / `password123` (regular user)
+
+> The backend runs on Render's free tier and sleeps after ~15 min of inactivity — the first request may take 30–60s to wake.
+
 ---
 
 ## Tech Stack
