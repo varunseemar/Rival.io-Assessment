@@ -13,7 +13,7 @@ let io: IoServer | null = null;
  */
 export function initSocket(server: HttpServer): IoServer {
   io = new IoServer(server, {
-    cors: { origin: env.corsOrigin, credentials: true },
+    cors: { origin: env.corsOrigins, credentials: true },
   });
 
   io.use((socket: Socket, next) => {

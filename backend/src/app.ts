@@ -9,7 +9,11 @@ import { errorHandler, notFoundHandler } from "./middleware/error";
 export function createApp(): Express {
   const app = express();
 
-  app.use(cors({ origin: env.corsOrigin, credentials: true }));
+  // Render (and most PaaS) sit behind a reverse proxy; trust it so Express
+  // correctly reads the protocol/IP from X-Forwarded-* headers.
+  app.set("trust proxy", 1);
+
+  app.use(cors({ origin: env.corsOrigins, credentials: true }));
   app.use(express.json());
   app.use(cookieParser());
 
