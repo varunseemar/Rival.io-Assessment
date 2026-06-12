@@ -1,4 +1,8 @@
 {
   "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // The production build excludes tests, so it must not load jest types.
+    "types": ["node"]
+  },
   "exclude": ["node_modules", "dist", "src/tests", "**/*.test.ts"]
 }
